@@ -1,7 +1,6 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Contador from'./components/Contador'
+import Contador from'./components/Buttons/Contador'
+import List from './components/products/product'
 
 function App() {
 
@@ -9,6 +8,7 @@ function App() {
     <>
      <h1>Hello World</h1>
      <Contador />
+     <List />
     </>
   )
 }
