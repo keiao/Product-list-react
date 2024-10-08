@@ -1,29 +1,33 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import "./product.scss";
 
 const productos = [
-    { id: 1, nombre:'Product 1', description: 'texto', precio: 100},
-    { id: 2, nombre:'Product 1', description: 'texto', precio: 100},
-    { id: 3, nombre:'Product 1', description: 'texto', precio: 100},
-    { id: 4, nombre:'Product 1', description: 'texto', precio: 100}
-]
+  { id: 1, tipo: "Wafle", nombre: "Waffle with Berries", precio: 6.50 },
+  { id: 2, tipo: "Créme Brúlee", nombre: "Vanilla Bean Créme Brulée",precio: 7.00},
+  { id: 3, tipo: "Macaron", nombre: "Macaron Mix Five", precio: 8.00 },
+  { id: 4, tipo: "Tirasimu", nombre: "Classic Tiramisu", precio: 5.50 },
+  { id: 5, tipo: "Baklava", nombre: "Pistachio Baklava", precio: 4.00 },
+  { id: 6, tipo: "Pie", nombre: "Lemon Meringue Pie", precio: 5.00 },
+  { id: 7, tipo: "Cake", nombre: "Red Velvet", precio: 4.50 },
+  { id: 8, tipo: "Brownie", nombre: "Salted Caramel Brownie", precio: 5.50 },
+  { id: 9, tipo: "Panna Corta", nombre: "Vanilla Panna Cotta", precio: 6.50 },
+];
 
 function listaProductos() {
-    return (
-        <>
-        <h2>lista de productos</h2>
-        <ul>
-            {productos.map((producto) =>  (
-                <li key={producto.id}>
-                    <h3>{producto.nombre}</h3>
-                    <p>{producto.description}</p>
-                    <p>Precio: ${producto.precio}</p>
-                </li>
-            ))}
-        </ul>
-        </>
-    )
+  return (
+    <>
+      <ul className="Product-list-grid">
+        {productos.map((producto) => (
+          <li key={producto.id}>
+            <p className="Tipos">{producto.tipo}</p>
+            <p className="Nombres">{producto.nombre}</p>
+            <span className="Precio">Precio: ${producto.precio.toFixed(2)}</span>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }
-
 
 export default listaProductos;
