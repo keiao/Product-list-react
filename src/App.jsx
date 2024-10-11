@@ -7,6 +7,7 @@ function App() {
   return (
     <>
      <h1 className='mainTitle'>Desser</h1>
+     <Contador/>
      <List />
     </>
   )

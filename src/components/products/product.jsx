@@ -3,7 +3,7 @@ import React from "react";
 import "./product.scss";
 
 const productos = [
-  { id: 1, tipo: "Wafle", nombre: "Waffle with Berries", precio: 6.50 },
+  { id: 1,  tipo: "Wafle", nombre: "Waffle with Berries", precio: 6.50 },
   { id: 2, tipo: "Créme Brúlee", nombre: "Vanilla Bean Créme Brulée",precio: 7.00},
   { id: 3, tipo: "Macaron", nombre: "Macaron Mix Five", precio: 8.00 },
   { id: 4, tipo: "Tirasimu", nombre: "Classic Tiramisu", precio: 5.50 },
@@ -19,9 +19,9 @@ function listaProductos() {
     <>
       <ul className="Product-list-grid">
         {productos.map((producto) => (
-          <li key={producto.id}>
-            <p className="Tipos">{producto.tipo}</p>
-            <p className="Nombres">{producto.nombre}</p>
+          <li key={producto.id} className="Product-list">
+            <span className="Tipos">{producto.tipo}</span>
+            <span className="Nombres">{producto.nombre}</span>
             <span className="Precio">Precio: ${producto.precio.toFixed(2)}</span>
           </li>
         ))}
