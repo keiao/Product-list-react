@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     <h1 className='mainTitle'>Desser</h1>
+     <h1 className='mainTitle'>Desserts</h1>
      <Contador/>
      <List />
     </>
