@@ -2,6 +2,27 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.boton-agregar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: var(--Fourth-Color);
+    width: 200px;
+    height: 45px;
+    border-radius: 50px;
+    color: var(--First-Color);
+    font-weight: 200;
+    border: 1px solid var(--Second-Color);
+    
+}
+
+.boton-contador {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background: var(--Second-Color);
     width: 200px;
     height: 45px;
@@ -10,11 +31,13 @@
     font-weight: 200;
 }
 
+
 .contador {
     font-size: 18px;
     margin: 0;
     font-weight: 100;
 }
+
 
 
 .botones {
@@ -35,6 +58,24 @@
               font-size: 20px;
             }
 }
+
+
+
+@media only screen and (max-width: 1080px) {
+
+    .boton-agregar {
+        width: 200px;
+        height: 40px;
+    }
+
+
+    .boton-contador {
+     width: 150px;
+     height: 40px;
+    }
+    
+}
+
 
 
  

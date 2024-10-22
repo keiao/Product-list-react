@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./product.scss";
+import Boton from "../Buttons/Contador"
 
 const productos = [
   { id: 1, imagen: "/assets/images/image-waffle-desktop.jpg",  tipo: "Wafle", nombre: "Waffle with Berries", precio: 6.50 },
@@ -17,10 +18,16 @@ const productos = [
 function listaProductos() {
   return (
     <>
+      <h1 className='mainTitle'>Desserts</h1>
       <ul className="Product-list-grid">
         {productos.map((producto) => (
           <li key={producto.id} className="Product-list">
-            <img src={producto.imagen} alt="{product.nombre}" className="Product-image" />
+            <div className="image-container">
+            <img src={producto.imagen} alt={producto.nombre} className="Product-image" />
+            <div className="boton-cart">
+            <Boton/>
+            </div>
+            </div>
             <span className="Tipos">{producto.tipo}</span>
             <span className="Nombres">{producto.nombre}</span>
             <span className="Precio">Precio: ${producto.precio.toFixed(2)}</span>
